@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interface</title>
+    <style></style>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.54.0/dist/phaser.js"></script>
+    <script src="/main.js"></script>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const config = {
+        type: Phaser.AUTO,
+        width: innerWidth, // largura da tela do jogo
+        height: innerHeight, // altura da tela do jogo
+        physics: {
+          default: "arcade",
+          arcade: {
+            debug: true,
+          },
+        },
+        parent: "game",
+        dom: {
+          createContainer: true,
+        },
+        scene: [Contratos], // Lista de cenas do jogo
+      };
+      //instancia de Jogo
+      const game = new Phaser.Game(config);
+    </script>
+  </body>
+</html>
