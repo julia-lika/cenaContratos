@@ -12,6 +12,18 @@ class ContratoUm extends Phaser.Scene {
   
     create() {
       this.add.image(640, 300, "notebook").setScale(0.7);
+      this.check = this.add.image(700, 370, "check").setScale(6);
+      this.check.setInteractive();
+      this.check.on ('pointerdown', () => {
+        this.scene.stop('ContratoUm');
+        this.scene.start('Contratos');
+      })
+      this.deny = this.add.image(770, 370, "deny").setScale(6);
+      this.deny.setInteractive();
+      this.deny.on ('pointerdown', () => {
+        this.scene.stop('ContratoUm');
+        this.scene.start('Contratos');
+      })
       
     }
   
