@@ -32,7 +32,9 @@ class ContratoUm extends Phaser.Scene {
         this.scene.start('Contratos');
       })
 
-      this.add.text(400, 200, 'Contrato', {fontSize:'30px', fill:'FFFFFF'});
+
+        var textoContratoUm = 'Contrato: \n jiwdbjk';
+      this.add.text(400, 200, textoContratoUm, {fontSize:'30px', fill:'FFFFFF'});
       
     }
   
